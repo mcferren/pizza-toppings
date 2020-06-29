@@ -1,0 +1,41 @@
+<h1>Choose the trending toppings</h1>
+<ul>
+  <li>
+    <span>Rank</span>
+    <span>Name</span>
+    <span>Order Count</span>
+  </li>
+  <li *ngFor="let element of countArray;let i=index">
+    <span>{{i+1}}</span>
+    <span style="text-align: left;">{{element.toppings | uppercase}} </span>
+    <span>{{element.count}}</span>
+  </li>
+</ul>
+<img class="background" src="../assets/images/pizza.svg" alt="">
+
+
+<style>
+  .background{
+    position: absolute;
+    z-index: -1;
+    opacity: .1;
+    left: 0;
+    right: 0;
+    top:0;
+    width: 50vw;
+  }
+ul{
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+  list-style-type: none;
+  margin:0;
+ padding: 0;
+}
+li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:.5rem
+}
+</style>
